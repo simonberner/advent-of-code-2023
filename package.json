@@ -4,7 +4,9 @@
   "description": "Advent of Code 2023 (adventofcode.com)",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "start": "func() { node ./day${1:01}/index.js; }; func",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch"
   },
   "author": "Simon Berner",
   "license": "MIT",
