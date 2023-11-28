@@ -11,8 +11,8 @@ In each directory you will find:
 
 - `README.md`: The puzzle description (Part 1&2)
 - `input.txt`: My puzzle input; to use your own input text from the puzzle, you can copy/paste it in this file
-- `index.js`: My solution
-- `index.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
+- `puzzle.js`: My solution
+- `puzzle.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
 
 You can use `npm start <day>` to get the solutions for that day; e.g. `npm start 01` to get the first day.
 
