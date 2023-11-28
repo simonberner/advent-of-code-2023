@@ -4,7 +4,7 @@
   "description": "Advent of Code 2023 (adventofcode.com)",
   "main": "index.js",
   "scripts": {
-    "start": "func() { node ./day${1:01}/index.js; }; func",
+    "start": "func() { node ./day${1:01}/puzzle.js; }; func",
     "test": "jest --verbose",
     "test:watch": "jest --watch"
   },
