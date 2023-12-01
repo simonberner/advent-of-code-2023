@@ -2,11 +2,15 @@
   "name": "advent-of-code-2023",
   "version": "0.1.0",
   "description": "Advent of Code 2023 (adventofcode.com)",
-  "main": "index.js",
+  "main": "./utils/index.js",
+  "type": "module",
   "scripts": {
     "start": "func() { node ./day${1:01}/puzzle.js; }; func",
     "test": "jest --verbose",
     "test:watch": "jest --watch"
+  },
+  "jshintConfig": {
+    "esversion": 11
   },
   "author": "Simon Berner",
   "license": "MIT",
