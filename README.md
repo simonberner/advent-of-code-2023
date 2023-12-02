@@ -16,8 +16,9 @@ In each directory you will find:
 
 You can use `npm start <day>` to get the solutions for that day; e.g. `npm start 01` to get the first day.
 
-## Testing with Jest
-### Script: `test:watch`
+## Notes
+### Testing with Jest
+#### Script: `test:watch`
 In the context of Jest, which is a popular JavaScript testing framework, the `--watch` option is used to enable Jest's watch mode. When you run Jest with the `--watch` flag, it sets up a persistent process that watches for changes in your project files. Here's what it does:
 
 1. **Initial Test Run:**
