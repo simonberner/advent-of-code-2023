@@ -23,4 +23,28 @@ describe('getSumOfAllValues', () => {
     });
 });
 
+// Puzzle input from the Part2 example
+const textInputPart2 = `
+two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen
+`
+
+const intValuesPart2 = [29, 83, 13, 24, 42, 14, 76];
+
 // Tests for Part2
+describe('getCalibrationValuesPart2', () => {
+    it('should also consider the spelled out with letters as valid digits', () => {
+        expect(getCalibrationValuesPart2(textInputPart2).toEqual(intValuesPart2));
+    });
+});
+
+describe('getSumOfAllValues', () => {
+    it('should return the sum of all the "real" two-digit calibration values', () => {
+        expect(getSumOfAllValues(intValuesPart2).toEqual(281));
+    });
+});
