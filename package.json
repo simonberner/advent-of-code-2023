@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "func() { node --experimental-modules ./day${1:-01}/puzzle.js; }; func",
-    "test": "jest --verbose",
-    "test:watch": "jest --watch"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest --watch"
   },
   "jshintConfig": {
     "esversion": 11
