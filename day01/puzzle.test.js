@@ -12,14 +12,14 @@ const intValues = [12, 38, 15, 77];
 
 // Tests for Part1
 describe('getCalibrationValues', () => {
-    it('should return all the recovered two-digit calibration values from the lines of text in the calibration document (the input.txt)', () => {
-        expect(getCalibrationValues(textInput).toEqual(intValues));
+    it('should return all the recovered two-digit calibration values from the lines in the input.txt', () => {
+        expect(getCalibrationValues(textInput)).toEqual(intValues);
     });
 });
 
 describe('getSumOfAllValues', () => {
     it('should return the sum of all the two-digit calibration values', () => {
-        expect(getSumOfAllValues(intValues).toEqual(142));
+        expect(getSumOfAllValues(intValues)).toEqual(142);
     });
 });
 
@@ -39,12 +39,12 @@ const intValuesPart2 = [29, 83, 13, 24, 42, 14, 76];
 // Tests for Part2
 describe('getCalibrationValuesPart2', () => {
     it('should also consider the spelled out with letters as valid digits', () => {
-        expect(getCalibrationValuesPart2(textInputPart2).toEqual(intValuesPart2));
+        expect(getCalibrationValuesPart2(textInputPart2)).toEqual(intValuesPart2);
     });
 });
 
 describe('getSumOfAllValues', () => {
     it('should return the sum of all the "real" two-digit calibration values', () => {
-        expect(getSumOfAllValues(intValuesPart2).toEqual(281));
+        expect(getSumOfAllValues(intValuesPart2)).toEqual(281);
     });
 });
