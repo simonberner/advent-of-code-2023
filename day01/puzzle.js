@@ -8,7 +8,7 @@ const answer1 = getSumOfAllValues(intValues);
 console.log(`#Day1-Part1: What is the sum of all of the calibration values? ${answer1}`);
 
 // Get all the two-digit int values line by line from the input.txt
-export function getCalibrationValues(textInput) {
+function getCalibrationValues(textInput) {
     let allIntValues = [];
     textInput.trim().split('\n').forEach(str => {
         console.log(`string line: ${str}`);
@@ -29,7 +29,7 @@ export function getCalibrationValues(textInput) {
 }
 
 // Sum up the int values from the int array
-export function getSumOfAllValues(intValues) {
+function getSumOfAllValues(intValues) {
     console.log(`intValues array: ${intValues}`)
     return intValues.reduce(function (total, currentValue) {
         return total + currentValue
@@ -37,4 +37,4 @@ export function getSumOfAllValues(intValues) {
     
 }
 
-// module.exports = { getCalibrationValues, getSumOfAllValues };
+export { getCalibrationValues, getSumOfAllValues };
