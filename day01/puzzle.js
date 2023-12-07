@@ -9,10 +9,9 @@ console.log(`#Day1-Part1: What is the sum of all of the calibration values? ${an
 
 // Get all the two-digit int values line by line from the input.txt
 export function getCalibrationValues(textInput) {
-    console.log(`Current module url is: ${currentModuleUrl}`);
     let allIntValues = [];
-    textInput.split('\n').forEach(str => {
-        console.log(`string: ${str}`);
+    textInput.trim().split('\n').forEach(str => {
+        console.log(`string line: ${str}`);
         const intString = str.match(/\d+/g).join(``); // get the string values from the text string with a regex
         console.log(`intString: ${intString}`)
         const firstDigit = intString.length >= 1 ? parseInt(intString.charAt(0)) : null;
