@@ -1,4 +1,4 @@
-import { getCalibrationValues, getSumOfAllValues } from './puzzle.js';
+import { getCalibrationValues, getCalibrationValuesPart2, getSumOfAllValues } from './puzzle.js';
 
 // Puzzle input from the Part1 example
 const textInput = `
