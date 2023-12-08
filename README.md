@@ -14,7 +14,9 @@ In each directory you will find:
 - `puzzle.js`: My solution
 - `puzzle.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
 
-You can use `npm start <day>` to get the solutions for that day; e.g. `npm start 01` to get the first day.
+## Execution
+- Use `npm start <day>` to get the solutions for that day; e.g. `npm start 01` to get the first day.
+- Using `npm test` for running the tests does not work yet. (No idea why this isn't working.) If you are using VSCode, install the Jest extension from Orta and run the tests with that.
 
 ## Notes
 ### Testing with Jest
