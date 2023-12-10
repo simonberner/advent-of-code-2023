@@ -11,6 +11,11 @@
   "jshintConfig": {
     "esversion": 11
   },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "transform": {}
+  },
   "author": "Simon Berner",
   "license": "MIT",
   "bugs": {
