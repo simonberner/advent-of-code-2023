@@ -23,7 +23,7 @@ describe('getSumOfAllValues', () => {
     });
 });
 
-// Puzzle input from the Part2 example
+// Puzzle input from the Part2 example + a very IMPORTANT edge case with 'oneight'
 const textInputPart2 = `
 two1nine
 eightwothree
@@ -32,9 +32,10 @@ xtwone3four
 4nineeightseven2
 zoneight234
 7pqrstsixteen
+mbkfgktwolbvsptgsixseven1oneightzvm
 `
 
-const intValuesPart2 = [29, 83, 13, 24, 42, 14, 76];
+const intValuesPart2 = [29, 83, 13, 24, 42, 14, 76, 28];
 
 // Tests for Part2
 describe('getCalibrationValuesPart2', () => {
@@ -45,6 +46,6 @@ describe('getCalibrationValuesPart2', () => {
 
 describe('getSumOfAllValues', () => {
     it('should return the sum of all the "real" two-digit calibration values', () => {
-        expect(getSumOfAllValues(intValuesPart2)).toEqual(281);
+        expect(getSumOfAllValues(intValuesPart2)).toEqual(309);
     });
 });
