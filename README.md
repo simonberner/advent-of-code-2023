@@ -15,8 +15,12 @@ In each directory you will find:
 - `puzzle.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
 
 ## Execution
-- Use `npm start <day>` to get the solutions for that day; e.g. `npm start 01` to get the first day.
-- Using `npm test` for running the tests does not work yet. (No idea why this isn't working.) If you are using VSCode as IDE, install the Jest extension from Orta and run the tests with that.
+### Production Code
+- Use `npm start <day>` to get the solutions for a specifc day: e.g. `npm start 01` to get the results for the first day.
+### Jest-Tests
+- Terminal: Using `npm test` for running the tests does not work yet. (I have no idea why this isn't working.)
+- VSCode: If you are using VSCode as IDE, install the Jest extension from Orta and run the tests with that.
+- WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
 
 ## Notes
 ### Testing with Jest
