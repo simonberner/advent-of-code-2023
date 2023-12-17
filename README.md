@@ -18,8 +18,8 @@ In each directory you will find:
 ### Production Code
 - Use `npm start <day>` to get the solutions for a specifc day: e.g. `npm start 01` to get the results for the first day.
 ### Jest-Tests
-- Terminal: Using `npm test` for running the tests does not work yet. (I have no idea why this isn't working.)
-- VSCode: If you are using VSCode as IDE, install the Jest extension from Orta and run the tests with that.
+- Terminal: Use `npm test <day>` to run the tests for a specific day: e.g. `npm test 01` to run the tests for the first day.
+- VSCode: If you are using VSCode as IDE, you can install the Jest extension from Orta and run the tests with that.
 - WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
 
 ## Notes
