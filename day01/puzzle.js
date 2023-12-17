@@ -10,18 +10,6 @@ console.log(`Solution #Day1-Part1: What is the sum of all of the calibration val
 // -------------------------- PART 1 --------------------------
 
 // -------------------------- PART 2 --------------------------
-// Define a mapping (enum) of spelled-out words to their numeric equivalents
-const wordToNumber = {
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-    six: 6,
-    seven: 7,
-    eight: 8,
-    nine: 9
-};
 const intValuesPart2 = getCalibrationValuesPart2(textInput);
 const answer2 = getSumOfAllValues(intValuesPart2);
 console.log(`Solution #Day1-Part2: What is the sum of all of the calibration values? ${answer2}`);
@@ -51,26 +39,24 @@ function getCalibrationValues(textInput) {
 // Sum up the int values from the int array
 function getSumOfAllValues(intValues) {
     console.log(`intValues array: ${intValues}`)
-    return intValues.reduce(function (total, currentValue) {
-        return total + currentValue
+    return intValues.reduce(function (accumulator, currentValue) {
+        return accumulator  + currentValue
     });
     
 }
 
 function getCalibrationValuesPart2(textInput) {
     let allIntValues = [];
-    // Regex to match the spelled out words to its numbers
-    const wordToNumberRegEx = new RegExp(Object.keys(wordToNumber).join('|'), 'g');
     textInput.trim().split('\n').forEach(str => {
         console.log(`Part2 - rawInputString: ${str}`)
-        // get the valid strings and digits out of the text (e.g. ssone5jkjtwo9 -> one5two9)
-        const mixedString = str.match(/(one|two|three|four|five|six|seven|eight|nine|\d)+/g).join('');
-        console.log(`Part2 - mixedString: ${mixedString}`)
-        // replace the spelled out numbers with its equivalent numeric values
-        const modifiedString = mixedString.replace(wordToNumberRegEx, match => wordToNumber[match]);
-        console.log(`Part2 - modifiedString: ${modifiedString}`);
-        const firstDigit = modifiedString.length >= 1 ? parseInt(modifiedString.charAt(0)) : null;
-        const lastDigit = modifiedString.length >= 2 ? parseInt(modifiedString.charAt(modifiedString.length - 1)) : null;
+        // enrich number words with its effective numbers
+        const replacedString = replaceWords(str)
+        console.log(`Part2 - replacedString: ${replacedString}`)
+        // get the valid digits out of the text (e.g. ss15jkj29 -> 1529)
+        const digitString = replacedString.match(/\d+/g).join('');
+        console.log(`Part2 - digitString: ${digitString}`)
+        const firstDigit = digitString.length >= 1 ? parseInt(digitString.charAt(0)) : null;
+        const lastDigit = digitString.length >= 2 ? parseInt(digitString.charAt(digitString.length - 1)) : null;
         var number = 0;
         if (lastDigit !== null) {
             number = firstDigit * 10 + lastDigit; // form two-digit number
@@ -82,6 +68,21 @@ function getCalibrationValuesPart2(textInput) {
     });
 
     return allIntValues;
+}
+
+// Add corresponding number to solve overlap condition (e.g. oneight)
+function replaceWords(text) {
+    let replacedString = text
+    replacedString = replacedString.replaceAll("one", "o1ne");
+    replacedString = replacedString.replaceAll("two", "t2wo");
+    replacedString = replacedString.replaceAll("three", "t3hree");
+    replacedString = replacedString.replaceAll("four", "f4our");
+    replacedString = replacedString.replaceAll("five", "f5ive");
+    replacedString = replacedString.replaceAll("six", "s6ix");
+    replacedString = replacedString.replaceAll("seven", "s7even");
+    replacedString = replacedString.replaceAll("eight", "e8ight");
+    replacedString = replacedString.replaceAll("nine", "n9ine");
+    return replacedString;
 }
 
 export { getCalibrationValues, getCalibrationValuesPart2, getSumOfAllValues };

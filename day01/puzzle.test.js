@@ -23,7 +23,7 @@ describe('getSumOfAllValues', () => {
     });
 });
 
-// Puzzle input from the Part2 example + a very IMPORTANT edge case with 'oneight'
+// Puzzle input from the Part2 example + the overlap edge case with 'oneight'
 const textInputPart2 = `
 two1nine
 eightwothree
