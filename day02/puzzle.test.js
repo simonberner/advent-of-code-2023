@@ -7,7 +7,6 @@ Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
 `;
-
 const  possibleGameIds = [1, 2, 5];
 
 
@@ -17,3 +16,10 @@ describe('getSumOfGameIds', () => {
         expect(getSumOfGameIds(possibleGameIds)).toEqual(8);
     });
 });
+
+describe('getPossibleGames', () => {
+    it('should return an Array of IDs of all the games which are possible.', () => {
+        expect(getPossibleGames(exampleRecordInput)).toEqual(possibleGameIds);
+    });
+});
+
