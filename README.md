@@ -23,30 +23,14 @@ In each directory you will find:
 - WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
 
 ## Notes
+### Driven by Tests (TDD)
+I have used TDD for solving each puzzle. This means:
+1. I first wrote a failing test
+2. Then I implemented the "simplest" possible solution till the test passed
+3. Finally I refactored the code (till the test passed again)
 ### Testing with Jest
 #### ECMAScript Modules
 - Using ECMAScript modules in Jest is still experimental!
 - Consider [the following](https://jestjs.io/docs/ecmascript-modules) when running Jest in combination with JavaScript modules.
 #### Script: `test:watch`
-In the context of Jest, which is a popular JavaScript testing framework, the `--watch` option is used to enable Jest's watch mode. When you run Jest with the `--watch` flag, it sets up a persistent process that watches for changes in your project files. Here's what it does:
-
-1. **Initial Test Run:**
-   - When you first run Jest with `--watch`, it performs an initial test run for your entire test suite.
-
-2. **Watch Mode:**
-   - After the initial run, Jest enters watch mode.
-   - It keeps running and monitors your project files for any changes.
-
-3. **File Changes:**
-   - When you save changes to your source code or test files, Jest detects the modifications.
-
-4. **Selective Test Execution:**
-   - Jest only reruns the relevant tests affected by the changes you made. It doesn't run the entire test suite again, which can save a lot of time, especially in large projects.
-
-5. **Interactive Options:**
-   - While in watch mode, Jest provides an interactive command line interface (CLI) where you can press certain keys to trigger specific actions. For example, you can press `a` to run all tests, or `f` to run only tests that failed in the last run.
-
-6. **Continuous Testing:**
-   - The watch mode allows for a continuous testing workflow. As you make changes and save files, Jest responds by quickly re-running only the necessary tests.
-
-This makes the development process more efficient, as developers can receive quick feedback on the impact of their changes without having to manually trigger test runs. It's a valuable feature for test-driven development (TDD) and generally for maintaining a reliable and up-to-date test suite while actively developing and changing code.
+In the context of Jest, which is a popular JavaScript testing framework, the `--watch` option is used to enable Jest's watch mode. When you run Jest with the `--watch` flag, it sets up a persistent process that watches for changes in your project files.
