@@ -1,9 +1,4 @@
-function getSumOfGameIds(intValues) {
-    console.log(`intValues array: ${intValues}`)
-    return intValues.reduce(function (accumulator, currentValue) {
-        return accumulator  + currentValue
-    });
+import { PuzzleDay2 } from "./PuzzleDay2.js";
 
-}
-
-export { getSumOfGameIds };
+const puzzleDay2 = new PuzzleDay2();
+console.log(`Solution #Day2-Part1: What is the sum of the IDs of those games? ${puzzleDay2.getSumOfGameIds(puzzleDay2.textInput)}`);
