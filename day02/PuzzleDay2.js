@@ -1,6 +1,6 @@
-import { getInput } from "../utils/index.js";
+import {getInput} from "../utils/index.js";
 
-class PuzzleDay2  {
+class PuzzleDay2 {
     constructor() {
         this.currentModuleUrl = new URL(import.meta.url);
         this.textInput = getInput(this.currentModuleUrl);
@@ -22,10 +22,10 @@ class PuzzleDay2  {
     getSumOfGameIds(intValues) {
         console.log(`getSumOfGameIds - intValues array: ${intValues}`)
         return intValues.reduce(function (accumulator, currentValue) {
-            return accumulator  + currentValue
+            return accumulator + currentValue
         });
 
     }
 }
 
-export { PuzzleDay2 };
+export {PuzzleDay2};
