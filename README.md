@@ -10,13 +10,14 @@ In this repository you can find my solutions for the puzzles. Each day's solutio
 In each directory you will find:
 
 - `README.md`: The puzzle description (Part 1&2)
-- `input.txt`: My puzzle input; to use your own input text from the puzzle, you can copy/paste it in this file
-- `puzzle.js`: My solution
+- `input.txt`: My personal puzzle input
+- `PuzzleDay$.js`: My solution code (e.g. PuzzleDay2.js)
+- `puzzle.js`: Code for execution (to get the solution)
 - `puzzle.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
 
 ## Execution
-### Production Code
-- Use `npm start <day>` to get the solutions for a specifc day: e.g. `npm start 01` to get the results for the first day.
+### Solution Code
+- Use `npm start <day>` to get the solutions for a specific day: e.g. `npm start 01` to get the results for the first day.
 ### Jest-Tests
 - Terminal: Use `npm test <day>` to run the tests for a specific day: e.g. `npm test 01` to run the tests for the first day.
 - VSCode: If you are using VSCode as IDE, you can install the Jest extension from Orta and run the tests with that.
