@@ -1,4 +1,5 @@
 import {PuzzleDay2} from "./PuzzleDay2.js";
+import expect from "expect";
 
 const exampleRecordInput = `
 Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
@@ -36,4 +37,31 @@ describe('isGamePossible', () => {
         expect(puzzleDay2.isGamePossible(testSetNotPossible)).toEqual(false);
     });
 });
+
+// Tests for Part2
+describe('getFewestNumberOfCubesOfAGame', () => {
+    it('should return the fewest number of cubes required to play a game.', () => {
+        const game = ["Game 1: 3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"];
+        const expectedFewestNoCubes = ["6 blue, 4 red, 2 green"]
+        expect(puzzleDay2.getFewestNumberOfCubesOfAGame(game)).toEqual(expectedFewestNoCubes);
+    });
+});
+
+describe('calculatePowerOfAGame', () => {
+    it('should return the fewest number of cubes required to play a game.', () => {
+        const testSet = ["Game 1: 6 blue, 4 red, 2 green"];
+        const expectedPoser = 48
+        expect(puzzleDay2.calculatePowerOfAGame(testSet)).toEqual(expectedPoser);
+    });
+});
+
+describe('addUpPowersOfAllGames', () => {
+    it('should return the fewest number of cubes required to play a game.', () => {
+        const powerOfAllGames = new Set([48, 12, 1560, 630]);
+        const expectedSum = 2286
+        expect(puzzleDay2.addUpPowersOfAllGames(powerOfAllGames)).toEqual(expectedSum);
+    });
+});
+
+
 
