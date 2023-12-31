@@ -48,16 +48,16 @@ describe('getFewestNumberOfCubesOfAGame', () => {
 });
 
 describe('calculatePowerOfAGame', () => {
-    it('should return the fewest number of cubes required to play a game.', () => {
-        const testSet = ["6 blue", "4 red", "2 green"];
-        const expectedPoser = 48
-        expect(puzzleDay2.calculatePowerOfAGame(testSet)).toEqual(expectedPoser);
+    it('should return the power of the minimum set of cubes in a game.', () => {
+        const minimumSetOfCubes = ["6 blue", "4 red", "2 green"];
+        const expectedPower = 48
+        expect(puzzleDay2.calculatePowerOfAGame(minimumSetOfCubes)).toEqual(expectedPower);
     });
 });
 
 describe('addUpPowersOfAllGames', () => {
-    it('should return the fewest number of cubes required to play a game.', () => {
-        const powerOfAllGames = new Set([48, 12, 1560, 630]);
+    it('should return the sum of the powers of all games.', () => {
+        const powerOfAllGames = new Set([48, 12, 1560, 630, 36]);
         const expectedSum = 2286
         expect(puzzleDay2.addUpPowersOfAllGames(powerOfAllGames)).toEqual(expectedSum);
     });
