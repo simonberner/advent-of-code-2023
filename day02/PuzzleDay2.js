@@ -11,6 +11,8 @@ class PuzzleDay2 {
         ])
     }
 
+    // Solution for Part1
+
     getPossibleGames(recordInput) {
         let allPossibleGameIds = [];
         // treat every single record entry (single line)
@@ -50,6 +52,58 @@ class PuzzleDay2 {
         return intValues.reduce(function (accumulator, currentValue) {
             return accumulator + currentValue
         });
+    }
+
+    // Solution for Part2
+
+    getSumOfPowerOfAllGames(recordInput) {
+        let powersOfAllGames = []
+        recordInput.trim().split('\n').forEach(str => {
+            const fewestCubes = this.getFewestPossibleNumberOfCubesOfAGame(str); // return: 6 blue, 4 red, 2 green
+            const powerOfTheGame = this.calculatePowerOfAGame(fewestCubes); // returns: 48
+            powersOfAllGames.push(powerOfTheGame); // eg. [48, 599, 435]
+        })
+
+        return this.addUpPowersOfAllGames(powersOfAllGames);
+    }
+    
+    getFewestPossibleNumberOfCubesOfAGame(game) {
+        // game: Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+        // what is the fewest number of cubes of each color in the game
+        const gameId = game.match(/Game \d+/)[0];
+        const result = {};
+        const cubesArray = game.replace(gameId + ':', '').trim().split(';'); // ["3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"]
+        // iterate of the cubesArray to find the highest number of cubes of each color
+        cubesArray.forEach(item => {
+            let pairs = item.split(", ");
+            pairs.forEach(pair => {
+                let [num, color] = pair.split(" ");
+                num = parseInt(num);
+                // The code checks if a color is already added in the result object. If it is not or if current count (num) for that color is greater than a previously recorded value (result[color]) then it updates the result[color] with the new maximum count.
+                if (!result[color] || result[color] < num) {
+                    result[color] = num;
+                }
+            });
+        });
+
+        // remove the NaN values from the result object
+        Object.keys(result).forEach(key => Number.isNaN(result[key]) && delete result[key]);
+        // put the result in a string array
+        return Object.entries(result).map(([color, count]) => `${count} ${color}`);
+    }
+
+    calculatePowerOfAGame(minimumSetOfCubes) {
+        const numbers = [];
+        minimumSetOfCubes.forEach(cube => {
+            const [count, color] = cube.split(' ');
+            numbers.push(parseInt(count))
+        });
+        // multiply the numbers array together
+        return numbers.reduce((accumulator, currentValue) => accumulator * currentValue);
+    }
+
+    addUpPowersOfAllGames(powerOfAllGames) {
+        return [...powerOfAllGames].reduce((accumulator, currentValue) => accumulator + currentValue);
     }
 }
 
