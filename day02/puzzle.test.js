@@ -39,9 +39,9 @@ describe('isGamePossible', () => {
 
 // Tests for Part2
 describe('getFewestNumberOfCubesOfAGame', () => {
-    it('should return the fewest number of cubes required to play a game.', () => {
-        const game = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green";
-        const expectedFewestNoCubes = ["6 blue", "4 red", "2 green"];
+    it('should return the fewest number of cubes required to play the game.', () => {
+        const game = "Game 2: 3 red, 13 blue, 5 green; 14 green, 14 blue; 9 blue, 10 green, 3 red; 2 green, 5 blue; 11 green, 3 blue, 3 red; 16 blue, 2 red, 9 green";
+        const expectedFewestNoCubes = ["3 red", "16 blue", "14 green"];
         const fewestNumberOfCubes = puzzleDay2.getFewestPossibleNumberOfCubesOfAGame(game);
         expect(fewestNumberOfCubes).toEqual(expectedFewestNoCubes);
     });
