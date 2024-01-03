@@ -66,13 +66,13 @@ class PuzzleDay2 {
 
         return this.addUpPowersOfAllGames(powersOfAllGames);
     }
-    
+
     getFewestPossibleNumberOfCubesOfAGame(game) {
         // game: Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
         // what is the fewest number of cubes of each color in the game
         const gameId = game.match(/Game \d+/)[0];
         const result = {};
-        const cubesArray = game.replace(gameId + ':', '').trim().split(';'); // ["3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"]
+        const cubesArray = game.replace(gameId + ':', '').trim().split('; '); // ["3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"]
         // iterate of the cubesArray to find the highest number of cubes of each color
         cubesArray.forEach(item => {
             let pairs = item.split(", ");
