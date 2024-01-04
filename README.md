@@ -1,5 +1,5 @@
 # ✨🎄 Advent of Code 2023 🎄✨
-The original puzzle of the year is back! This time I tried to tackle it in JavaScript.
+The original puzzle of the year is back! This time I try to solve the puzzles in JavaScript.
 
 ## Website
 [Advent of Code](https://adventofcode.com/)
@@ -25,10 +25,10 @@ In each directory you will find:
 
 ## Notes
 ### Driven by Tests (TDD)
-I have used TDD for solving each puzzle. This means:
-1. I first wrote a failing test
-2. Then I implemented the "simplest" possible solution till the test passed
-3. Finally I refactored the code (till the test passed again)
+I am using TDD for solving each puzzle. This means:
+1. I first write one or more failing test/s
+2. Then I implement the "simplest" possible solution code till the test/s passes
+3. Finally I refactor the solution code (till the test/s passes again)
 ### Testing with Jest
 #### ECMAScript Modules
 - Using ECMAScript modules in Jest is still experimental!
