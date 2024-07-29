@@ -11,7 +11,7 @@ In each directory you will find:
 
 - `README.md`: The puzzle description (Part 1&2)
 - `input.txt`: My personal puzzle input
-- `PuzzleDay$.js`: My solution code (e.g. PuzzleDay2.js)
+- `PuzzleDay<day>.js`: My solution code (e.g. PuzzleDay2.js)
 - `puzzle.js`: Code for execution (to get the solution)
 - `puzzle.test.js`: Jest-Tests for part 1 and part 2 of the puzzle, using the example in the description
 
